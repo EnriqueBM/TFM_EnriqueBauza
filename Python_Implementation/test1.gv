@@ -1,0 +1,51 @@
+digraph{
+
+# Graph style
+"ordering"="out"
+"rankdir"="TD"
+
+#########
+# Nodes #
+#########
+
+"Pow(Mul(Symbol('r'), Pow(Symbol('s'), Mul(Integer(-1), Symbol('s'))), Pow(Symbol('t'), Integer(-1))), sin(Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x')))))_()" ["color"="black", "label"="Pow", "shape"="ellipse"];
+"Mul(Symbol('r'), Pow(Symbol('s'), Mul(Integer(-1), Symbol('s'))), Pow(Symbol('t'), Integer(-1)))_(0,)" ["color"="black", "label"="Mul", "shape"="ellipse"];
+"Symbol('r')_(0, 0)" ["color"="black", "label"="r", "shape"="ellipse"];
+"Pow(Symbol('s'), Mul(Integer(-1), Symbol('s')))_(0, 1)" ["color"="black", "label"="Pow", "shape"="ellipse"];
+"Symbol('s')_(0, 1, 0)" ["color"="black", "label"="s", "shape"="ellipse"];
+"Mul(Integer(-1), Symbol('s'))_(0, 1, 1)" ["color"="black", "label"="Mul", "shape"="ellipse"];
+"Integer(-1)_(0, 1, 1, 0)" ["color"="black", "label"="-1", "shape"="ellipse"];
+"Symbol('s')_(0, 1, 1, 1)" ["color"="black", "label"="s", "shape"="ellipse"];
+"Pow(Symbol('t'), Integer(-1))_(0, 2)" ["color"="black", "label"="Pow", "shape"="ellipse"];
+"Symbol('t')_(0, 2, 0)" ["color"="black", "label"="t", "shape"="ellipse"];
+"Integer(-1)_(0, 2, 1)" ["color"="black", "label"="-1", "shape"="ellipse"];
+"sin(Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x'))))_(1,)" ["color"="black", "label"="sin", "shape"="ellipse"];
+"Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x')))_(1, 0)" ["color"="black", "label"="Add", "shape"="ellipse"];
+"Float('3.25342', precision=13)_(1, 0, 0)" ["color"="black", "label"="3.25", "shape"="ellipse"];
+"Symbol('s')_(1, 0, 1)" ["color"="black", "label"="s", "shape"="ellipse"];
+"Mul(Integer(2), Symbol('x'))_(1, 0, 2)" ["color"="black", "label"="Mul", "shape"="ellipse"];
+"Integer(2)_(1, 0, 2, 0)" ["color"="black", "label"="2", "shape"="ellipse"];
+"Symbol('x')_(1, 0, 2, 1)" ["color"="black", "label"="x", "shape"="ellipse"];
+
+#########
+# Edges #
+#########
+
+"Pow(Mul(Symbol('r'), Pow(Symbol('s'), Mul(Integer(-1), Symbol('s'))), Pow(Symbol('t'), Integer(-1))), sin(Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x')))))_()" -> "Mul(Symbol('r'), Pow(Symbol('s'), Mul(Integer(-1), Symbol('s'))), Pow(Symbol('t'), Integer(-1)))_(0,)";
+"Pow(Mul(Symbol('r'), Pow(Symbol('s'), Mul(Integer(-1), Symbol('s'))), Pow(Symbol('t'), Integer(-1))), sin(Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x')))))_()" -> "sin(Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x'))))_(1,)";
+"Mul(Symbol('r'), Pow(Symbol('s'), Mul(Integer(-1), Symbol('s'))), Pow(Symbol('t'), Integer(-1)))_(0,)" -> "Symbol('r')_(0, 0)";
+"Mul(Symbol('r'), Pow(Symbol('s'), Mul(Integer(-1), Symbol('s'))), Pow(Symbol('t'), Integer(-1)))_(0,)" -> "Pow(Symbol('s'), Mul(Integer(-1), Symbol('s')))_(0, 1)";
+"Mul(Symbol('r'), Pow(Symbol('s'), Mul(Integer(-1), Symbol('s'))), Pow(Symbol('t'), Integer(-1)))_(0,)" -> "Pow(Symbol('t'), Integer(-1))_(0, 2)";
+"Pow(Symbol('s'), Mul(Integer(-1), Symbol('s')))_(0, 1)" -> "Symbol('s')_(0, 1, 0)";
+"Pow(Symbol('s'), Mul(Integer(-1), Symbol('s')))_(0, 1)" -> "Mul(Integer(-1), Symbol('s'))_(0, 1, 1)";
+"Mul(Integer(-1), Symbol('s'))_(0, 1, 1)" -> "Integer(-1)_(0, 1, 1, 0)";
+"Mul(Integer(-1), Symbol('s'))_(0, 1, 1)" -> "Symbol('s')_(0, 1, 1, 1)";
+"Pow(Symbol('t'), Integer(-1))_(0, 2)" -> "Symbol('t')_(0, 2, 0)";
+"Pow(Symbol('t'), Integer(-1))_(0, 2)" -> "Integer(-1)_(0, 2, 1)";
+"sin(Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x'))))_(1,)" -> "Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x')))_(1, 0)";
+"Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x')))_(1, 0)" -> "Float('3.25342', precision=13)_(1, 0, 0)";
+"Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x')))_(1, 0)" -> "Symbol('s')_(1, 0, 1)";
+"Add(Float('3.25342', precision=13), Symbol('s'), Mul(Integer(2), Symbol('x')))_(1, 0)" -> "Mul(Integer(2), Symbol('x'))_(1, 0, 2)";
+"Mul(Integer(2), Symbol('x'))_(1, 0, 2)" -> "Integer(2)_(1, 0, 2, 0)";
+"Mul(Integer(2), Symbol('x'))_(1, 0, 2)" -> "Symbol('x')_(1, 0, 2, 1)";
+}

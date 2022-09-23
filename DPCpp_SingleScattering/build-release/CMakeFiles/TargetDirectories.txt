@@ -1,0 +1,3 @@
+/home/quique/Documentos/TFM-Practicas/Heterogeneous_nolog/build-release/CMakeFiles/rebuild_cache.dir
+/home/quique/Documentos/TFM-Practicas/Heterogeneous_nolog/build-release/CMakeFiles/edit_cache.dir
+/home/quique/Documentos/TFM-Practicas/Heterogeneous_nolog/build-release/CMakeFiles/Het_Imp.dir

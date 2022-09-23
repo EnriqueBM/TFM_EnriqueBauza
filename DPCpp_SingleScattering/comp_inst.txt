@@ -1,0 +1,5 @@
+source /opt/intel/oneapi/setvars.sh
+dpcpp -std=c++17 -O3 -IBitString_Tree_Representation/ -IBitString_Tree_Representation/CImg_latest/ -c BitString_Tree_Representation/tree_rep.cpp -o obj/tree_rep.o
+dpcpp -std=c++17 -O3 -IBitString_Tree_Representation/ -IBitString_Tree_Representation/CImg_latest/ -c main.cpp -o obj/main.o
+dpcpp -o bin/data_parallel obj/tree_rep.o obj/main.o -lm -lpthread -lX11 -ljpeg -ltbb
+
